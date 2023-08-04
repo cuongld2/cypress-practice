@@ -10,8 +10,8 @@ describe("E2E Template Spec", () => {
 
       cy.visit("https://weather.com/vi-VN/weather/today/l/VMXX0006:1:VM?Goto=Redirected");
       cy.contains('10 ngày').should('be.visible').click();
-      new Common().getLengthOfElements('[id*="detailIndex"]').then((value)=>{
-        if(value===15){
+      new Common().getLengthOfElements('[id*="detailIndexzfsfs"]').then((value)=>{
+        if(value.length===15){
           console.log('TRUE');
         }else{
           console.log('false');

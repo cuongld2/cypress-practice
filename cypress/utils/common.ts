@@ -6,7 +6,9 @@ export class Common{
 
     getLengthOfElements(elementLocator:string) {
 
-        return cy.get('body').find(elementLocator).its('length');
+        return cy.get('body').then((element) => {
+            return element.find(elementLocator);
+        });
         
     }
 
